@@ -10,6 +10,35 @@
   <body>
     <div class="container">
         <h1 class="text-center">Dolgozók</h1>
+
+        <h3>Adatok hozzáadása a táblázathoz</h3>
+        <div class="addform">
+          <div class="input">
+            <label for="name" class="form-label">
+              Név
+            </label>
+            <input type="text" id="name" class="form-control">
+          </div>
+
+          <div class="input">
+            <label for="city" class="form-label">
+              Település
+            </label>
+            <input type="text" id="city" class="form-control">
+          </div>
+
+          <div class="input">
+            <label for="salary" class="form-label">
+              Fizetés
+            </label>
+            <input type="text" id="salary" class="form-control">
+          </div>
+
+          <div>
+            <button id="addButton" class="btn btn-outline-success mt-2 mb-4">Mentés</button>
+          </div>
+        </div>
+
         <table class="table table-striped">
           <thead>
             <tr>

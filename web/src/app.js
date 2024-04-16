@@ -1,11 +1,32 @@
 const doc = {
-    empBody: document.getElementById('empBody')
+    empBody: document.getElementById('empBody'),
+    addButton: document.getElementById('addButton')
 } 
 
-function getEmployees() {
-    const url = 'http://localhost:8000/employees'
+const state = {
+    url: 'http://localhost:8000/employees'
+}
 
-    fetch(url)
+doc.addButton.addEventListener('click', () => {
+
+})
+
+function createEmployee() {
+    fetch(state.url, {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            name: "valaki",
+            city: "valahol",
+            salary: 300
+        })
+    })
+}
+
+function getEmployees() {
+    fetch(state.url)
     .then(response => response.json())
     .then(result => {renderEmployees(result)})
 }
@@ -19,6 +40,10 @@ function renderEmployees(employeeList) {
         <td>${emp.name}</td>
         <td>${emp.city}</td>
         <td>${emp.salary}</td>
+        <td>
+            <button class="btn btn-outline-primary">Szerkesztés</button>
+            <button class="btn btn-outline-danger">Törlés</button>
+        </td>
     `
     doc.empBody.appendChild(row)
     });
