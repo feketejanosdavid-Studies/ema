@@ -11,6 +11,30 @@
             "name": "Béla",
             "city": "Szolnok",
             "salary": 2900
+        },
+        {
+            "id": 3,
+            "name": "Bence",
+            "city": "Nagykanizsa",
+            "salary": 900
+        },
+        {
+            "id": 4,
+            "name": "Obelix",
+            "city": "Budapest",
+            "salary": 13444
+        },
+        {
+            "id": 5,
+            "name": "Gergő",
+            "city": "Szolnok",
+            "salary": 1865
+        },
+        {
+            "id": 6,
+            "name": "Ákos",
+            "city": "Kecskemét",
+            "salary": 3900
         }
     ]
 
