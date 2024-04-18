@@ -1,6 +1,9 @@
 const doc = {
     empBody: document.getElementById('empBody'),
-    addButton: document.getElementById('addButton')
+    addButton: document.getElementById('addButton'),
+    nameDoc: document.getElementById('name'),
+    cityDoc: document.getElementById('city'), 
+    salaryDoc: document.getElementById('salary')
 } 
 
 const state = {
@@ -8,7 +11,8 @@ const state = {
 }
 
 doc.addButton.addEventListener('click', () => {
-
+    console.log('Működik')
+    createEmployee()
 })
 
 function createEmployee() {
@@ -18,9 +22,9 @@ function createEmployee() {
             "Content-type": "application/json"
         },
         body: JSON.stringify({
-            name: "valaki",
-            city: "valahol",
-            salary: 300
+            name: doc.nameDoc.value,
+            city: doc.cityDoc.value,
+            salary: Number(doc.salaryDoc.value)
         })
     })
 }
