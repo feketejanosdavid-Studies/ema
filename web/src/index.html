@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
   <head>
@@ -12,30 +11,53 @@
         <h1 class="text-center">Dolgozók</h1>
 
         <h3>Adatok hozzáadása a táblázathoz</h3>
-        <div class="addform">
-          <div class="input">
-            <label for="name" class="form-label">
-              Név
-            </label>
-            <input type="text" id="name" class="form-control">
-          </div>
 
-          <div class="input">
-            <label for="city" class="form-label">
-              Település
-            </label>
-            <input type="text" id="city" class="form-control">
-          </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Adatfelvétel
+        </button>
 
-          <div class="input">
-            <label for="salary" class="form-label">
-              Fizetés
-            </label>
-            <input type="text" id="salary" class="form-control">
-          </div>
-
-          <div>
-            <button id="addButton" class="btn btn-outline-success mt-2 mb-4">Mentés</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Adatrögzítés</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="addform">
+                  <div class="input">
+                    <label for="name" class="form-label">
+                      Név
+                    </label>
+                    <input type="text" id="name" class="form-control">
+                  </div>
+        
+                  <div class="input">
+                    <label for="city" class="form-label">
+                      Település
+                    </label>
+                    <input type="text" id="city" class="form-control">
+                  </div>
+        
+                  <div class="input">
+                    <label for="salary" class="form-label">
+                      Fizetés
+                    </label>
+                    <input type="text" id="salary" class="form-control">
+                  </div>
+        
+                  <div>
+                    <button id="addButton" class="btn btn-outline-success mt-2 mb-4">Mentés</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Bezárás</button>
+                <button type="button" class="btn btn-outline-success" id="addBtton">mentés</button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -52,6 +74,7 @@
           </tbody>
         </table>
     </div>
+    <script src="bootstrap.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

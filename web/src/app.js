@@ -7,13 +7,22 @@ const doc = {
 } 
 
 const state = {
-    url: 'http://localhost:8000/employees'
+    url: 'http://localhost:8000/employees',
+    name: '',
+    city: '',
+    salary:0
 }
 
 doc.addButton.addEventListener('click', () => {
     console.log('Működik')
     createEmployee()
 })
+
+function getDataFromForm() {
+    state.name = doc.nameDoc.value
+    state.city = doc.cityDoc.value
+    state.salary= Number(doc.salaryDoc.value)
+}
 
 function createEmployee() {
     fetch(state.url, {
@@ -22,10 +31,17 @@ function createEmployee() {
             "Content-type": "application/json"
         },
         body: JSON.stringify({
-            name: doc.nameDoc.value,
-            city: doc.cityDoc.value,
-            salary: Number(doc.salaryDoc.value)
+            name: state.name,
+            city: state.city,
+            salary: state.salary
         })
+    })
+}
+
+function editEmployee(){
+    fetch(state.url, {
+        method: 'DELETE',
+
     })
 }
 

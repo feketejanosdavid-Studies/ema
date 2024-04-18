@@ -59,6 +59,24 @@
       "city": "Budapest",
       "salary": 12334,
       "id": 10
+    },
+    {
+      "name": "a",
+      "city": "b",
+      "salary": 10,
+      "id": 11
+    },
+    {
+      "name": "",
+      "city": "",
+      "salary": 0,
+      "id": 12
+    },
+    {
+      "name": "",
+      "city": "",
+      "salary": 0,
+      "id": 13
     }
   ]
 }
