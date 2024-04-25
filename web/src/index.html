@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <title>Dolgozó</title>
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">        
   </head>
   <body>
     <div class="container">
         <h1 class="text-center">Dolgozók</h1>
-
-        <h3>Adatok hozzáadása a táblázathoz</h3>
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Adatfelvétel
-        </button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -27,6 +21,12 @@
               </div>
               <div class="modal-body">
                 <div class="addform">
+                  <div class="input">
+                    <label for="id" class="form-label">
+                      Id
+                    </label>
+                    <input type="text" id="id" readonly class="form-control">
+                  </div>
                   <div class="input">
                     <label for="name" class="form-label">
                       Név
@@ -48,26 +48,29 @@
                     <input type="text" id="salary" class="form-control">
                   </div>
         
-                  <div>
+                  <!-- <div>
                     <button id="addButton" class="btn btn-outline-success mt-2 mb-4">Mentés</button>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Bezárás</button>
-                <button type="button" class="btn btn-outline-success" id="addBtton">mentés</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+                <button type="button" class="btn btn-outline-success" id="addButton" data-bs-dismiss="modal"><i class="bi bi-floppy"></i></button>
               </div>
             </div>
           </div>
         </div>
 
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>név</th>
-              <th>város</th>
-              <th>fizetés</th>
+        <table class="table table-light table-striped-columns">
+          <thead class="table-dark">
+            <tr class="plus">
+              <th class="plus">Id</th>
+              <th class="plus">Név</th>
+              <th class="plus">Város</th>
+              <th class="plus">Fizetés</th>
+              <th class="plus"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="startAdding()">
+                <i class="bi bi-person-add"></i>
+                </button></th>
             </tr>
           </thead>
           <tbody id="empBody">
